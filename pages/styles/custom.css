@@ -1,0 +1,401 @@
+/*
+File: Custom Css File
+*/
+
+/* System Css & JS Start  */
+
+/* 767.98px এর বেশি সাইজের জন্য */
+@media (min-width: 768px) {
+  #mobile_size {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  :is([data-layout="vertical"], [data-layout="semibox"]) .app-menu {
+    margin-left: -100%;
+    padding: 10px 0 20px 0;
+    top: 70px;
+  }
+
+  #topnav-hamburger-icon {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #hidden {
+    display: none;
+  }
+}
+
+[data-layout="horizontal"]
+  .navbar-menu
+  .navbar-nav
+  > li:nth-of-type(2)
+  > .nav-link.menu-link {
+  padding-left: 15px;
+}
+
+[data-layout="horizontal"] .hidden {
+  display: none;
+}
+
+/* <!-- System Css & JS End -- > */
+
+/* <!-- Select 2 Css -- > */
+
+.custom-options {
+  width: 100%;
+  background-color: var(--vz-secondary-bg);
+  border: 1px solid var(--vz-border-color);
+  box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
+  top: 100%;
+  margin-top: 0;
+  border-bottom-left-radius: 2.5px;
+  border-bottom-right-radius: 2.5px;
+  word-break: break-all;
+  will-change: visibility;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  transform: translateY(1px);
+  max-height: 217px;
+}
+
+.custom-option {
+  cursor: pointer;
+  padding: 0.35rem 1.2rem 0.35rem 16px;
+}
+
+.custom-select {
+  line-height: 1.8;
+}
+
+.custom-select input {
+  padding: 0px;
+  cursor: pointer;
+}
+
+#arrow-icon {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.arrow.down::before {
+  transform: rotate(90deg);
+  display: block;
+  content: "\f0142";
+  font-family: "Material Design Icons";
+  margin-left: auto;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  font-size: 1.15rem;
+}
+
+.arrow.up::before {
+  transform: rotate(270deg);
+  display: block;
+  content: "\f0142";
+  font-family: "Material Design Icons";
+  margin-left: auto;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  font-size: 1.15rem;
+}
+
+/* Product Select 2 */
+
+.select2-container {
+  width: 100%;
+  position: relative;
+}
+
+.select2-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  z-index: 1000;
+  display: none;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.select2-item {
+  cursor: pointer;
+  padding: 0.35rem 1.2rem 0.35rem 16px;
+}
+
+.select2-item:hover {
+  background: #f1f1f1;
+}
+
+[data-layout="horizontal"]
+  .navbar-menu
+  .navbar-nav
+  > li:nth-of-type(2)
+  > .nav-link.menu-link {
+  padding-left: 20px;
+}
+/* loading Vverlay  */
+#loading-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.body-loading {
+  opacity: 0.5;
+  z-index: -9999;
+}
+
+/* Loader */
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#preloader img {
+  width: 180px;
+  height: 180px;
+}
+
+/* select2 dropdown */
+.choices {
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/*........................ Global Area Start ........................ */
+
+.custom-select-wrapper {
+  position: relative;
+  width: 300px;
+}
+
+.custom-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.custom-select-trigger {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.custom-options {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  z-index: 999;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.custom-options.open {
+  display: block;
+}
+
+.custom-option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.custom-option:hover {
+  background: #f1f1f1;
+}
+
+.custom-select input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+/* Default Sidebar Active Bg Color */
+.navbar-menu .navbar-nav .nav-link.active {
+  border-right: 5px solid #1abb9c;
+  background-color: #6f6f6f24;
+}
+
+/* Sidebar Bg Color  */
+/* .navbar-menu {
+    background-color: #1d2642;
+} */
+
+/* Sidebar Menu Drupdawn button Bg Color */
+.active-menu {
+  background-color: #1d496f40;
+}
+
+.choices__inner {
+  padding: 0.25rem 0.6rem 0.1rem 0.5rem !important;
+}
+
+/* Table Border */
+.border_buttom_none {
+  border-bottom: 1px solid white;
+}
+
+/*........................ Global Area End ........................ */
+
+/*........................ Sell Report Area Start ........................ */
+.w3-modal {
+  z-index: 9999 !important;
+}
+.material-shadow {
+  border-top: 1px solid #ededed !important;
+}
+
+/* .select_width {
+    width: 90%;
+} */
+
+@media (min-width: 254px) {
+  .select_width {
+    width: 70%;
+  }
+}
+@media (min-width: 292px) {
+  .select_width {
+    width: 76%;
+  }
+}
+@media (min-width: 320px) {
+  .select_width {
+    width: 79%;
+  }
+}
+@media (min-width: 343px) {
+  .select_width {
+    width: 81%;
+  }
+}
+@media (min-width: 372px) {
+  .select_width {
+    width: 83%;
+  }
+}
+@media (min-width: 400px) {
+  .select_width {
+    width: 84.5%;
+  }
+}
+@media (min-width: 430px) {
+  .select_width {
+    width: 86%;
+  }
+}
+@media (min-width: 454px) {
+  .select_width {
+    width: 87%;
+  }
+}
+@media (min-width: 470px) {
+  .select_width {
+    width: 87.5%;
+  }
+}
+@media (min-width: 485px) {
+  .select_width {
+    width: 88%;
+  }
+}
+@media (min-width: 505px) {
+  .select_width {
+    width: 88.6%;
+  }
+}
+@media (min-width: 576px) {
+  .select_width {
+    width: 88%;
+  }
+}
+@media (min-width: 768px) {
+  .select_width {
+    width: 88%;
+  }
+}
+@media (min-width: 992px) {
+  .select_width {
+    width: 86%;
+  }
+}
+@media (min-width: 1200px) {
+  .select_width {
+    width: 91%;
+  }
+  .w3-modal-content {
+    width: 1000px !important;
+  }
+}
+
+@media (min-width: 1700px) {
+  .select_width {
+    width: 90.9%;
+  }
+}
+@media (min-width: 2000px) {
+  .select_width {
+    width: 90.8%;
+  }
+}
+@media (min-width: 2500px) {
+  .select_width {
+    width: 90.4%;
+  }
+}
+@media (min-width: 3000px) {
+  .select_width {
+    width: 89.5%;
+  }
+}
+
+/*........................ Sell Report Area End ........................ */
+
+/*........................ Report Area End ........................ */
+
+.responsive_tab {
+  flex-basis: auto !important;
+}
+
+/*........................ Report Area End ........................ */
+
+/*........................ Salary Advance Start ........................ */
+
+/*........................ Salary Advance End ........................ */
+.popover-wrapper {
+  display: inline-block;
+  cursor: not-allowed;
+  /* Shows a disabled cursor on hover */
+}
